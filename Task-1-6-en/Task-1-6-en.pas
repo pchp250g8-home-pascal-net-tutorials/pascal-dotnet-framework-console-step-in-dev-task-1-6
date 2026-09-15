@@ -11,7 +11,7 @@ begin
   Console.Write('Price of one can of paint (in rubles): ');
   Cardinal.TryParse(Console.ReadLine(), c);
   // Number Of cans Of paint For the entire length Of the fence
-  var b : Cardinal := n div k + n mod k;
+  var b : Cardinal := Convert.ToUInt32(Math.Ceiling(n / k));
   var p : Cardinal := b * c; // Cost Of all cans Of paint For the entire fence
   // -- Display information on the screen --
   Console.WriteLine($'{b} cans of paint are needed for {n} meters of fence.');

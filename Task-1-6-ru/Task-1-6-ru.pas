@@ -10,7 +10,8 @@ begin
   Cardinal.TryParse(Console.ReadLine(), k);
   Console.Write('Цена одной банки краски (в рублях): ');
   Cardinal.TryParse(Console.ReadLine(), c);
-  var b : Cardinal := n div k + n mod k; // Количество банок краски на всю длину забора
+   // Количество банок краски на всю длину забора
+  var b : Cardinal := Convert.ToUInt32(Math.Ceiling(n / k));
   var p : Cardinal := b * c; // Стоимость всех банок краски для всего забора
   // -- Вывод информации на экран --
   Console.WriteLine($'На {n} метров забора нужно {b} банок(и) краски.');
